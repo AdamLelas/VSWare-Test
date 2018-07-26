@@ -1,0 +1,18 @@
+@(myForm: Form[User])
+
+<html>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+        <h1>User Login</h1>
+
+        @helper.form(action = helper.CSRF( routes.AppController.auth())) {
+            @helper.inputText(myForm("username"))
+            @helper.inputPassword(myForm("password"))
+
+            <input type="submit" value="Login">
+        }
+
+    </body>
+</html>

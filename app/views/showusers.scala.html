@@ -1,0 +1,14 @@
+@(users: List[User])
+
+<html>
+    <head>
+        <title>Users</title>
+    </head>
+
+    <body>
+        @for(user <- users){
+            <h2>@user.username</h2>
+        }
+    </body>
+</html>
+
